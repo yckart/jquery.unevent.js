@@ -20,9 +20,10 @@
             "url": "http://yckart.com/mit/"
         }
     ],
-    "homepage": "https://github.com/yckart/jquery.unevent.js",
-    "bugs": "https://github.com/yckart/jquery.unevent.js/issues",
+    "homepage": "http://yckart.github.com/jquery.unevent.js",
+    "demo": "http://yckart.github.com/jquery.unevent.js",
     "docs": "https://github.com/yckart/jquery.unevent.js",
+    "bugs": "https://github.com/yckart/jquery.unevent.js/issues",
     "dependencies": {
         "jquery": ">=1.6"
     }
