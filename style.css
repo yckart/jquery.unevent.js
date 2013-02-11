@@ -1,0 +1,40 @@
+body {
+    color: #444;
+    font: 120% sans-serif;
+    background: indigo
+}
+
+a{color:indigo; text-decoration: none}
+a:hover {text-decoration: underline;}
+
+.logo {
+    color: #fff;
+    font: 400 200px 'Numans', sans-serif;
+    text-align: center;
+}
+
+div:not(#box) {
+    margin:6% 20%;
+    padding:3% 6%;
+    background:#fff;
+    border-radius:6px
+}
+
+
+#box {
+    text-align: center;
+    background: #eee
+}
+
+span {
+    padding: 3px 6px;
+    color: #fff;
+    background: indigo;
+    border-radius: 6px
+}
+
+pre {
+    width: 100%;
+    overflow: auto;
+    color: #666;
+}

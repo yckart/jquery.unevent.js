@@ -1,0 +1,27 @@
+{
+    "name": "Unevent",
+    "version": "0.0.1",
+    "title": "jquery.unevent.js",
+    "author": {
+        "name": "Yannick Albert",
+        "url": "https://github.com/yckart"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://yckart.com/mit/"
+        }
+    ],
+    "dependencies": {
+        "jquery": ">=1.6"
+    },
+    "description": "Attach event handler functions with delay",
+    "keywords": [
+        "unevent",
+        "not event",
+        "on",
+        "bind",
+        "trigger"
+    ],
+    "homepage": "https://github.com/yckart/jquery.unevent.js"
+}
