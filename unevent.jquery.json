@@ -1,29 +1,30 @@
 {
     "name": "unevent",
     "title": "jQuery Unevent",
-    "description": "Attach event handler functions with delay",
+    "description": "Attach debounced event handler functions with delay",
     "keywords": [
+    	"debounce",
         "unevent",
         "notevent",
         "on",
-        "bind",
+        "delay",
+        "event",
         "trigger"
     ],
-    "version": "0.0.1",
+    "version": "0.0.2",
     "author": {
         "name": "Yannick Albert",
         "url": "https://github.com/yckart"
     },
-    "licenses": [
-        {
-            "type": "MIT",
-            "url": "http://yckart.com/mit/"
-        }
-    ],
-    "homepage": "https://github.com/yckart/jquery.unevent.js",
-    "bugs": "https://github.com/yckart/jquery.unevent.js/issues",
+    "licenses": [{
+        "type": "MIT",
+        "url": "http://yckart.com/mit/"
+    }],
+    "homepage": "http://yckart.github.io/jquery.unevent.js",
+    "demo": "http://yckart.github.io/jquery.unevent.js",
     "docs": "https://github.com/yckart/jquery.unevent.js",
+    "bugs": "https://github.com/yckart/jquery.unevent.js/issues",
     "dependencies": {
-        "jquery": ">=1.6"
+        "jquery": ">=1.7.2"
     }
 }
