@@ -1,109 +1,109 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset='utf-8'>
-        <meta name='viewport' content='width=device-width'>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
 
-        <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Numans'>
-        <link rel='stylesheet' type='text/css' href='style.css'>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Numans">
+    <link rel="stylesheet" href="style.css">
 
-        <title>unevent | Attach event handler functions with delay</title>
-    </head>
+    <title>unevent | Attach event handler functions with delay</title>
+</head>
 
-    <body>
-        <h1 class='logo'>unevent</h1>
+<body>
+    <h1 class="logo">unevent</h1>
 
-        <div>
-            <h2>Something about</h2>
-            <p>Attach an event handler function for one or more events to the selected elements if the event was <b>not</b> triggered for a given interval.</p>
-            <p>This is useful if you want to fire a callback only after a delay, like the resize event, or else.</p>
-        </div>
+    <div>
+        <h2>Something about</h2>
+        <p>Attach an event handler function for one or more events to the selected elements if the event was <b>not</b> triggered for a given interval.</p>
+        <p>This is useful if you want to fire a callback only after a delay, like the resize event, or else.</p>
+    </div>
 
-        <div>
-            <h3>How to use</h3>
-            <p>It is quite simple!</p>
+    <div>
+        <h3>How to use</h3>
+        <p>It is quite simple!</p>
 
-            <p><span>1st</span> Include jQuery and the plugin:</p>
-            <pre><code>&lt;script src=&#39;jquery.js&#39;&gt;&lt;/script&gt;
+        <p><span>1st</span> Include jQuery and the plugin:</p>
+        <pre><code>&lt;script src=&#39;jquery.js&#39;&gt;&lt;/script&gt;
 &lt;script src=&#39;jquery.unevent.js&#39;&gt;&lt;/script&gt;</code></pre>
 
-            <p><span>2nd</span> Initialize <a href="">unevent</a> like any other <code>on</code> or <code>bind</code>-event handler, except that you pass an extra parameter as a last:</p>
+        <p><span>2nd</span> Initialize <a href="https://github.com/yckart/jquery.unevent.js">unevent</a> like any other <code>on</code>-event handler, except that you can pass an extra parameter as a last:</p>
 <pre><code>$(window).on('resize', function(e) {
-    // alert(e.type + '-event was 250ms not triggered');
+    // console.log(e.type + ' was 250ms not triggered');
 }, 250);</code></pre>
 
-            <p><span>3rd</span> Trigger your <i>event</i>!</p>
-        </div>
+        <p><span>3rd</span> Trigger your <i>event</i>!</p>
+    </div>
 
-        <div id="example">
-            <h3>Example</h3>
-            <p>Move your mouse and wait 500ms...</p>
+    <div id="example">
+        <h3>Example</h3>
+        <p>Move your mouse and wait 250ms...</p>
 <pre><code>$('#example').on('mousemove', function(e) {
-    $('#box').html(e.type + ' was 500ms not triggered');
-}, 500);
+    $('#box').html(e.type + ' was 250ms not triggered');
+}, 250);
 </code></pre>
-            <div id="box"></div>
-        </div>
+        <div id="box"></div>
+    </div>
 
-        <div>
-            <h3>Download</h3>
-            <p>
-                Get the <a href='https://raw.github.com/yckart/jquery.unevent.js/master/jquery.unevent.js'>raw</a> script, download the complete <a href='https://github.com/yckart/jquery.unevent.js/zipball/master'>package</a> or fork it on <a href='https://github.com/yckart/jquery.unevent.js/'>GitHub</a>.
-            </p>
-        </div>
+    <div>
+        <h3>Download</h3>
+        <p>
+            Get the <a href="https://raw.github.com/yckart/jquery.unevent.js/master/jquery.unevent.js">raw</a> script, download the complete <a href="https://github.com/yckart/jquery.unevent.js/zipball/master">package</a> or fork it on <a href="https://github.com/yckart/jquery.unevent.js/">GitHub</a>.
+        </p>
+    </div>
 
-        <div>
-            <h3>Support</h3>
-            <p>
-                <a href='http://twitter.com/yckart'>@yckart</a> #unevent<br>
-                <a href='http://yckart.com/'>http://yckart.com</a>
-            </p>
+    <div>
+        <h3>Support</h3>
+        <p>
+            <a href="http://twitter.com/yckart">@yckart</a> #unevent<br>
+            <a href="http://yckart.com/">http://yckart.com</a>
+        </p>
 
-            <h4>License</h4>
-            <tt>
-                <p>Copyright (c) 2013 Yannick Albert (<a href='http://yckart.com/'>http://yckart.com/</a>)</p>
+        <h4>License</h4>
+        <tt>
+            <p>Copyright (c) 2013 Yannick Albert (<a href="http://yckart.com/">http://yckart.com/</a>)</p>
 
-                <p>Permission is hereby granted, free of charge, to any person obtaining a copy
-                of this software and associated documentation files (the "Software"), to deal
-                in the Software without restriction, including without limitation the rights
-                to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-                copies of the Software, and to permit persons to whom the Software is
-                furnished to do so, subject to the following conditions:</p>
+            <p>Permission is hereby granted, free of charge, to any person obtaining a copy
+            of this software and associated documentation files (the "Software"), to deal
+            in the Software without restriction, including without limitation the rights
+            to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+            copies of the Software, and to permit persons to whom the Software is
+            furnished to do so, subject to the following conditions:</p>
 
-                <p>The above copyright notice and this permission notice shall be included in
-                all copies or substantial portions of the Software.</p>
+            <p>The above copyright notice and this permission notice shall be included in
+            all copies or substantial portions of the Software.</p>
 
-                <p>THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-                IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-                FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
-                AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-                LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-                OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-                THE SOFTWARE.</p>
-            </tt>
-        </div>
+            <p>THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+            IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+            FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
+            AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+            LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+            OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+            THE SOFTWARE.</p>
+        </tt>
+    </div>
 
-        <script src='http://code.jquery.com/jquery-1.9.1.min.js'></script>
-        <script src='jquery.unevent.js'></script>
-        <script>
-            var win = $(window),
-                doc = $(document),
-                logo = $('.logo'),
-                box = $('#box');
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="jquery.unevent.js"></script>
+    <script>
+        var $win = $(window),
+            $doc = $(document),
+            $logo = $('.logo'),
+            $box = $('#box');
 
-            doc.on('mousemove', function(e) {
-                box.html(e.type + ' is triggered');
+        $doc.on('mousemove', function(e) {
+            $box.html(e.type + ' is triggered');
+        });
+
+        $doc.on('mousemove', function(e) {
+            $box.html(e.type + ' was 250ms not triggered');
+        }, 250);
+
+        $win.on('resize', function(){
+            $logo.css({
+                fontSize: Math.max(Math.min($win.outerWidth() / (1 * 8), parseFloat(Number.POSITIVE_INFINITY)), parseFloat(Number.NEGATIVE_INFINITY))
             });
-
-            doc.on('mousemove', function(e) {
-                box.html(e.type + ' was 500ms not triggered');
-            }, 500);
-
-            win.on('resize', function(){
-                logo.css({
-                    fontSize: Math.max(Math.min(win.outerWidth() / (1 * 8), parseFloat(Number.POSITIVE_INFINITY)), parseFloat(Number.NEGATIVE_INFINITY))
-                });
-            }, 250).resize();
-        </script>
-    </body>
+        }, 250).resize();
+    </script>
+</body>
 </html>

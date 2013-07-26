@@ -1,31 +1,30 @@
 /*!
- * jquery.unevent.js 0.1
+ * jquery.unevent.js 0.2
  * https://github.com/yckart/jquery.unevent.js
  *
- *
- * Copyright (c) 2012 Yannick Albert (http://yckart.com)
+ * Copyright (c) 2013 Yannick Albert (http://yckart.com)
  * Licensed under the MIT license (http://www.opensource.org/licenses/mit-license.php).
- * 2013/02/08
+ * 2013/07/26
 **/
 ;(function ($) {
-    var methods = { on: $.fn.on, bind: $.fn.bind };
-    $.each(methods, function(k){
-        $.fn[k] = function () {
-            var args = [].slice.call(arguments),
-                delay = args.pop(),
-                fn = args.pop(),
-                timer;
+    var on = $.fn.on, timer;
+    $.fn.on = function () {
+        var args = Array.apply(null, arguments);
+        var last = args[args.length - 1];
 
-            args.push(function () {
-                var self = this,
-                    arg = arguments;
-                clearTimeout(timer);
-                timer = setTimeout(function(){
-                    fn.apply(self, [].slice.call(arg));
-                }, delay);
-            });
+        if (isNaN(last) || (last === 1 && args.pop())) return on.apply(this, args);
 
-            return methods[k].apply(this, isNaN(delay) ? arguments : args);
-        };
-    });
-}(jQuery));
+        var delay = args.pop();
+        var fn = args.pop();
+
+        args.push(function () {
+            var self = this, params = arguments;
+            clearTimeout(timer);
+            timer = setTimeout(function () {
+                fn.apply(self, params);
+            }, delay);
+        });
+
+        return on.apply(this, args);
+    };
+}(this.jQuery || this.Zepto));
