@@ -7,8 +7,7 @@
  * 2013/07/26
 **/
 ;(function ($) {
-    var on = $.fn.on;
-    $.fn.on = function () {
+    $.fn.afterEvent = function () {
         var args = Array.apply(null, arguments);
         var last = args[args.length - 1];
 
@@ -25,6 +24,6 @@
             }, delay);
         });
 
-        return on.apply(this, args);
+        return $.fn.on.apply(this, args);
     };
 }(this.jQuery || this.Zepto));
