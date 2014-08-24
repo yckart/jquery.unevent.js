@@ -7,7 +7,7 @@
  * 2013/07/26
 **/
 ;(function ($) {
-    var on = $.fn.on, timer;
+    var on = $.fn.on;
     $.fn.on = function () {
         var args = Array.apply(null, arguments);
         var last = args[args.length - 1];
@@ -19,8 +19,8 @@
 
         args.push(function () {
             var self = this, params = arguments;
-            clearTimeout(timer);
-            timer = setTimeout(function () {
+            clearTimeout(this.timer);
+            this.timer = setTimeout(function () {
                 fn.apply(self, params);
             }, delay);
         });
