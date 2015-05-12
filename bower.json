@@ -1,0 +1,22 @@
+{
+  "name": "jquery.unevent.js",
+  "main": "jquery.unevent.js",
+  "version": "0.0.2",
+  "homepage": "http://yckart.github.io/jquery.unevent.js",
+  "authors": [
+    "Yannick Albert <info@yannick-albert.com>"
+  ],
+  "description": "Attach debounced event handler functions with delay",
+  "keywords": [
+    "jquery",
+    "unevent"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
